@@ -1,0 +1,1 @@
+export type StorageKey = 'draw-speed' | 'play-time-weeks' | 'results';
