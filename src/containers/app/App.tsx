@@ -1,8 +1,21 @@
+import { useCallback, useState } from 'react';
+import Slider from '../../components/slider/Slider';
 import './App.css';
 import { Wrapper } from './App.styles';
 
 function App() {
-  return <Wrapper>Yolo</Wrapper>;
+  const [drawSpeed, setDrawSpeed] = useState(500);
+
+  const onSliderValueChange = useCallback((newValue: number) => {
+    console.log({ newValue });
+    setDrawSpeed(newValue);
+  }, []);
+
+  return (
+    <Wrapper>
+      <Slider value={drawSpeed} onChange={onSliderValueChange} />
+    </Wrapper>
+  );
 
   /* const [count, setCount] = useState(0);
 
