@@ -1,8 +1,8 @@
 import { PropsWithChildren, useReducer } from 'react';
 import { INITIAL_STATE } from './constants';
-import DispatchContext from './dispatch-context';
-import reducer from './reducer';
-import StateContext from './state-context';
+import DispatchContext from './context/dispatch/dispatch-context';
+import reducer from './reducer/reducer';
+import StateContext from './context/state/state-context';
 
 type Props = PropsWithChildren<{}>;
 

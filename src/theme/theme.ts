@@ -7,22 +7,26 @@ import colors from './colors';
 import { Theme } from './types';
 
 const theme: Theme = {
+  background: colors.grey1,
   input: {
     active: colors.green1,
-    border: colors.green2,
+    border: colors.green1,
+    disabledBackground: colors.white,
     hover: colors.green3,
     text: colors.blue1,
   },
+  mainContainerBackground: colors.white,
   primary: colors.green1,
-  secondary: colors.green2,
+  primaryText: colors.blue1,
+  secondary: colors.yellow1,
+  secondaryText: colors.white,
   slider: {
     active: colors.green1,
     hover: colors.green2,
     thumb: colors.white,
     thumbBorder: colors.green1,
-    track: colors.green2,
+    track: colors.green3,
   },
-  text: colors.blue1,
 };
 
 const styled = baseStyled as ThemedStyledInterface<Theme>;

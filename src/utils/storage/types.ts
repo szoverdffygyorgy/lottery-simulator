@@ -1,1 +1,1 @@
-export type StorageKey = 'draw-speed' | 'play-time-weeks' | 'results';
+export type StorageKey = 'attempts' | 'draw-speed' | 'results';

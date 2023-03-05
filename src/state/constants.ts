@@ -1,16 +1,17 @@
+import { NUMBER_OF_NUMBERS_TO_DRAW } from '../constants';
 import { State } from './types';
 
 const DRAW_SPEED = 500;
 
 export const INITIAL_STATE: State = {
-  drawnNumbers: [],
+  attempts: 4213,
+  drawnNumbers: [23, 1, 58, 38, 78],
   drawSpeed: DRAW_SPEED,
-  numberOfPlays: 0,
-  numbersInPlay: [],
+  numbersInPlay: Array.from({ length: NUMBER_OF_NUMBERS_TO_DRAW }, () => ''),
   results: {
-    two: 0,
-    three: 0,
-    four: 0,
-    five: 0,
+    two: 213214,
+    three: 213,
+    four: 657,
+    five: 5,
   },
 };

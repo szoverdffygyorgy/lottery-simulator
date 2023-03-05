@@ -1,6 +1,7 @@
+import { debounce } from 'lodash';
 import { useCallback } from 'react';
 import { RANGE_MAX_VALUE, RANGE_MIN_VALUE } from './constants';
-import { Container, SliderInput } from './Slider.styles';
+import { Container, SliderInput } from './slider.styles';
 
 type Props = {
   value: number;
@@ -9,8 +10,9 @@ type Props = {
 
 const Slider = ({ value, onChange }: Props) => {
   const onSliderValueChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) =>
-      onChange(parseInt(event.target.value)),
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      onChange(parseInt(event.target.value));
+    },
     []
   );
 

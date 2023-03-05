@@ -11,20 +11,25 @@ export type Colors = {
   green1: Color;
   green2: Color;
   green3: Color;
+  grey1: Color;
   yellow1: Color;
   white: Color;
 };
 
 export type Theme = {
-  primary: Color;
-  secondary: Color;
-  text: Color;
+  background: Color;
   input: {
     active: Color;
     border: Color;
+    disabledBackground: Color;
     hover: Color;
     text: Color;
   };
+  mainContainerBackground: Color;
+  primary: Color;
+  primaryText: Color;
+  secondary: Color;
+  secondaryText: Color;
   slider: {
     active: Color;
     hover: Color;

@@ -1,54 +1,32 @@
-import { useCallback, useState } from 'react';
-import LotterySpeed from '../lottery-speed/lottery-speed';
-import { Wrapper } from './App.styles';
+import { useEffect } from 'react';
+import { INITIAL_STATE } from '../../state/constants';
+import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
+import { Results } from '../../state/types';
+import storage from '../../utils/storage/storage';
+import MainContainer from '../main-container/main-container';
+import Title from '../title/title';
+import { Container } from './App.styles';
 
 function App() {
-  const [drawSpeed, setDrawSpeed] = useState(500);
+  const dispatch = useDispatchContext();
 
-  const onSliderValueChange = useCallback((newValue: number) => {
-    console.log({ newValue });
-    setDrawSpeed(newValue);
+  useEffect(() => {
+    const drawSpeed = storage.get<number>('draw-speed') ?? 0;
+    const attempts = storage.get<number>('attempts') ?? 0;
+    const results = storage.get<Results>('results') ?? INITIAL_STATE.results;
+
+    dispatch({
+      command: 'INITIALIZE',
+      fields: { attempts, drawSpeed, results },
+    });
   }, []);
 
   return (
-    <Wrapper>
-      <LotterySpeed speed={drawSpeed} onSpeedChange={onSliderValueChange} />
-    </Wrapper>
+    <Container>
+      <Title />
+      <MainContainer />
+    </Container>
   );
-
-  /* const [count, setCount] = useState(0);
-
-   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <button
-          onClick={async () => {
-            console.log(await fetchRandomNumbers());
-          }}
-        >
-          Click me
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  ); */
 }
 
 export default App;

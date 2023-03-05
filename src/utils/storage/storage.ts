@@ -15,9 +15,10 @@ const get = <T>(key: StorageKey): T | null => {
 };
 
 const set = (key: StorageKey, item: string) =>
-    window.localStorage.setItem(key, item);
+  window.localStorage.setItem(key, item);
 
-const remove = (key: StorageKey) =>
-    window.localStorage.removeItem(key);
+const remove = (key: StorageKey) => window.localStorage.removeItem(key);
 
-export { get, remove, set };
+const storage = { get, remove, set };
+
+export default storage;

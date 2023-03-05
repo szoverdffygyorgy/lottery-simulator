@@ -1,5 +1,5 @@
 import { createContext, Dispatch } from 'react';
-import { Action } from './types';
+import { Action } from '../../types';
 
 const DispatchContext = createContext<Dispatch<Action>>(() => {});
 
