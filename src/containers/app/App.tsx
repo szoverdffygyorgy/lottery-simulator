@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import Slider from '../../components/slider/Slider';
+import LotterySpeed from '../lottery-speed/lottery-speed';
 import { Wrapper } from './App.styles';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <Wrapper>
-      <Slider value={drawSpeed} onChange={onSliderValueChange} />
+      <LotterySpeed speed={drawSpeed} onSpeedChange={onSliderValueChange} />
     </Wrapper>
   );
 
