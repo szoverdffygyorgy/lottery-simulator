@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: fit-content;
-  height: 72px;
   margin-bottom: 32px;
   border: 1px solid ${({ theme }) => theme.secondary};
   border-radius: 10px;

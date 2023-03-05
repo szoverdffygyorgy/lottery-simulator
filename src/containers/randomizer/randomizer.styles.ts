@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h3`
-  margin-right: 57px;
+  margin: 0 57px 0 0;
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.primaryText};

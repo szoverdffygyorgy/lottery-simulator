@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 325px;
-  height: 135px;
   margin-bottom: 32px;
   padding: 18px 19px 11px 24px;
   background-color: ${({ theme }) => theme.primary};
@@ -25,6 +24,7 @@ export const BoldText = styled.label`
 
 export const Grid = styled.div`
   display: grid;
+  row-gap: 6px;
   grid-template-columns: 56.92% 43.08%;
   width: 100%;
   height: 100%;
