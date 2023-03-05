@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { ChangeEvent, useCallback } from 'react';
 import { MAX_DRAW_SPEED, MIN_DRAW_SPEED } from '../../constants';
 import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
 import useStateContext from '../../state/context/state/use-state-context';
@@ -9,7 +9,7 @@ const Slider = () => {
   const { drawSpeed } = useStateContext();
 
   const onChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) =>
+    (event: ChangeEvent<HTMLInputElement>) =>
       dispatch({
         command: 'SET_DRAW_SPEED',
         drawSpeed: parseInt(event.target.value),
