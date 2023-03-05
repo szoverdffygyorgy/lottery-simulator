@@ -14,8 +14,8 @@ const get = <T>(key: StorageKey): T | null => {
   }
 };
 
-const set = (key: StorageKey, item: string) =>
-  window.localStorage.setItem(key, item);
+const set = (key: StorageKey, item: unknown) =>
+  window.localStorage.setItem(key, JSON.stringify(item));
 
 const remove = (key: StorageKey) => window.localStorage.removeItem(key);
 

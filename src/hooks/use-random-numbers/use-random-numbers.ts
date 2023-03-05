@@ -10,7 +10,6 @@ const useRandomNumbers = () => {
   const [numbers, setNumbers] = useState<(number | '')[]>([]);
 
   useEffect(() => {
-    console.log({ isUsingRandomValues });
     if (!isUsingRandomValues) {
       return;
     }
@@ -19,7 +18,6 @@ const useRandomNumbers = () => {
   }, [isUsingRandomValues]);
 
   useEffect(() => {
-    console.log('effect');
     if (!numbers.length) {
       return;
     }

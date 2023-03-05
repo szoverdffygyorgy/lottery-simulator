@@ -1,15 +1,8 @@
-import { State } from '../../state/types';
+import { Results } from '../../state/types';
 
-export const SUCCESS_ORDER: (keyof State['results'])[] = [
+export const SUCCESS_ORDER: (keyof Results)[] = [
   'two',
   'three',
   'four',
   'five',
 ];
-
-export const SUCCESS_MAP: Record<keyof State['results'], number> = {
-  five: 5,
-  four: 4,
-  three: 3,
-  two: 2,
-};

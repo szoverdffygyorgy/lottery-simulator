@@ -6,14 +6,16 @@ export type Results = {
 };
 
 export type Action =
-  | { command: 'INITIALIZE'; fields: Partial<State> }
   | { command: 'SET_DRAW_SPEED'; drawSpeed: number }
   | { command: 'SET_USER_NUMBERS'; numbersInPlay: (number | '')[] }
-  | { command: 'TOGGLE_RANDOM_VALUES'; isUsingRandomValues: boolean };
+  | { command: 'TOGGLE_RANDOM_VALUES'; isUsingRandomValues: boolean }
+  | { command: 'SET_NEW_LOTTERY_NUMBERS'; drawnNumbers: (number | '')[] }
+  | { command: 'UPDATE_RESULTS'; results: Partial<Results> }
+  | { command: 'INCREMENT_ATTEMPTS' };
 
 export type State = {
   attempts: number;
-  drawnNumbers: number[];
+  drawnNumbers: (number | '')[];
   drawSpeed: number;
   isUsingRandomValues: boolean;
   numbersInPlay: (number | '')[];

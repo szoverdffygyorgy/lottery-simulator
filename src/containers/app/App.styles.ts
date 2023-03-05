@@ -4,5 +4,5 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.primaryText};
 `;

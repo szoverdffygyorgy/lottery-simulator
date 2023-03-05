@@ -1,15 +1,12 @@
-import { NUMBER_OF_NUMBERS_TO_DRAW } from '../../constants';
+import { INITIAL_DRAW_SPEED, NUMBER_OF_NUMBERS_TO_DRAW } from '../../constants';
 import { Action, State } from '../types';
 
 const reducer = (state: State, action: Action) => {
   switch (action.command) {
-    case 'INITIALIZE': {
-      state = { ...state, ...action.fields };
-      break;
-    }
-
     case 'SET_DRAW_SPEED': {
-      state = { ...state, drawSpeed: action.drawSpeed };
+      console.log({ state: state.drawSpeed, action: action.drawSpeed });
+      state = { ...state, drawSpeed: action.drawSpeed || INITIAL_DRAW_SPEED };
+
       break;
     }
 
@@ -18,6 +15,7 @@ const reducer = (state: State, action: Action) => {
         ...state,
         numbersInPlay: action.numbersInPlay,
       };
+
       break;
     }
 
@@ -30,6 +28,24 @@ const reducer = (state: State, action: Action) => {
           () => ''
         ),
       };
+
+      break;
+    }
+
+    case 'SET_NEW_LOTTERY_NUMBERS': {
+      state = { ...state, drawnNumbers: action.drawnNumbers };
+
+      break;
+    }
+
+    case 'UPDATE_RESULTS': {
+      state = { ...state, results: { ...state.results, ...action.results } };
+
+      break;
+    }
+
+    case 'INCREMENT_ATTEMPTS': {
+      state = { ...state, attempts: state.attempts + 1 };
       break;
     }
 

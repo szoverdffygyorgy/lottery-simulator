@@ -1,5 +1,6 @@
+import { NUMBER_MAP } from '../../state/constants';
 import useStateContext from '../../state/context/state/use-state-context';
-import { SUCCESS_MAP, SUCCESS_ORDER } from './constants';
+import { SUCCESS_ORDER } from './constants';
 import {
   Cell,
   CellTitle,
@@ -14,7 +15,7 @@ const LotterySuccess = () => {
     <Container>
       {SUCCESS_ORDER.map((key, index) => (
         <Cell key={index}>
-          <CellTitle>{`${SUCCESS_MAP[key]} matches`}</CellTitle>
+          <CellTitle>{`${NUMBER_MAP[key]} matches`}</CellTitle>
           <CellValue>{results[key]}</CellValue>
         </Cell>
       ))}

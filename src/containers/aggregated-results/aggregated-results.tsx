@@ -2,9 +2,7 @@ import useStateContext from '../../state/context/state/use-state-context';
 import { BoldText, Container, Grid, Text } from './aggregated-results.styles';
 
 const AggregatedResults = () => {
-  const state = useStateContext();
-
-  const attempts = state.attempts;
+  const { attempts } = useStateContext();
 
   return (
     <Container>

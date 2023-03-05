@@ -1,18 +1,19 @@
-import { debounce } from 'lodash';
 import { useCallback } from 'react';
-import { RANGE_MAX_VALUE, RANGE_MIN_VALUE } from './constants';
+import { MAX_DRAW_SPEED, MIN_DRAW_SPEED } from '../../constants';
+import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
+import useStateContext from '../../state/context/state/use-state-context';
 import { Container, SliderInput } from './slider.styles';
 
-type Props = {
-  value: number;
-  onChange: (newValue: number) => void;
-};
+const Slider = () => {
+  const dispatch = useDispatchContext();
+  const { drawSpeed } = useStateContext();
 
-const Slider = ({ value, onChange }: Props) => {
-  const onSliderValueChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      onChange(parseInt(event.target.value));
-    },
+  const onChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) =>
+      dispatch({
+        command: 'SET_DRAW_SPEED',
+        drawSpeed: parseInt(event.target.value),
+      }),
     []
   );
 
@@ -20,10 +21,10 @@ const Slider = ({ value, onChange }: Props) => {
     <Container>
       <SliderInput
         type="range"
-        min={RANGE_MIN_VALUE}
-        max={RANGE_MAX_VALUE}
-        value={value}
-        onChange={onSliderValueChange}
+        min={MIN_DRAW_SPEED}
+        max={MAX_DRAW_SPEED}
+        value={drawSpeed || MIN_DRAW_SPEED}
+        onChange={onChange}
       />
     </Container>
   );
