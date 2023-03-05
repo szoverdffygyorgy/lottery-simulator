@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import useSaveProgress from '../../hooks/use-save-progress/use-save-progress';
 import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
 import useStateContext from '../../state/context/state/use-state-context';
@@ -13,8 +13,6 @@ function App() {
   useSaveProgress();
 
   const onResetClick = useCallback(() => dispatch({ command: 'RESET' }), []);
-
-  useEffect(() => console.log(state), [state]);
 
   return (
     <Container>
