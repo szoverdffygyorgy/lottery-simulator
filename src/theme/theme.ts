@@ -14,7 +14,14 @@ const theme: Theme = {
     text: colors.blue1,
   },
   primary: colors.green1,
-  secondary: colors.yellow1,
+  secondary: colors.green2,
+  slider: {
+    active: colors.green1,
+    hover: colors.green2,
+    thumb: colors.white,
+    thumbBorder: colors.green1,
+    track: colors.green2,
+  },
   text: colors.blue1,
 };
 

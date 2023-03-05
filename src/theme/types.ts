@@ -12,6 +12,7 @@ export type Colors = {
   green2: Color;
   green3: Color;
   yellow1: Color;
+  white: Color;
 };
 
 export type Theme = {
@@ -23,5 +24,12 @@ export type Theme = {
     border: Color;
     hover: Color;
     text: Color;
+  };
+  slider: {
+    active: Color;
+    hover: Color;
+    thumb: Color;
+    thumbBorder: Color;
+    track: Color;
   };
 };

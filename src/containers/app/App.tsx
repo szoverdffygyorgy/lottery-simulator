@@ -1,6 +1,5 @@
 import { useCallback, useState } from 'react';
 import Slider from '../../components/slider/Slider';
-import './App.css';
 import { Wrapper } from './App.styles';
 
 function App() {
