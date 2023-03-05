@@ -5,7 +5,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.primaryText};
