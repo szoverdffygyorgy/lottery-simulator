@@ -13,10 +13,8 @@ const theme: Theme = {
     color: colors.blue1,
   },
   input: {
-    active: colors.green1,
     border: colors.green1,
     disabledBackground: colors.white,
-    hover: colors.green3,
     text: colors.blue1,
   },
   mainContainerBackground: colors.white,
@@ -25,11 +23,9 @@ const theme: Theme = {
   secondary: colors.yellow1,
   secondaryText: colors.white,
   slider: {
-    active: colors.green1,
-    hover: colors.green2,
     thumb: colors.white,
     thumbBorder: colors.green1,
-    track: colors.green3,
+    track: colors.green2,
   },
 };
 

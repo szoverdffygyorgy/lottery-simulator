@@ -6,7 +6,7 @@ import {
   CellTitle,
   CellValue,
   Container,
-} from './lotters-success.styles';
+} from './lottery-success.styles';
 
 const LotterySuccess = () => {
   const { results } = useStateContext();
