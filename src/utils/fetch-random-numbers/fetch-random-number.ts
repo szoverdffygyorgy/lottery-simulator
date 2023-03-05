@@ -1,10 +1,15 @@
+import {
+  MAX_NUMBER,
+  MIN_NUMBER,
+  NUMBER_OF_NUMBERS_TO_DRAW,
+} from '../../constants';
 import { URL } from './constants';
 
 export const fetchRandomNumbers = async (
-  min = 1,
-  max = 90,
-  count = 5
-): Promise<number[]> => {
+  min = MIN_NUMBER,
+  max = MAX_NUMBER,
+  count = NUMBER_OF_NUMBERS_TO_DRAW
+): Promise<(number | '')[]> => {
   try {
     const res = await window.fetch(
       `${URL}?min=${min}&max=${max}&count=${count}`
@@ -14,6 +19,6 @@ export const fetchRandomNumbers = async (
     return numbers;
   } catch (e) {
     console.warn('Failed to get numbers');
-    return [];
+    return Array.from({ length: count }, () => '');
   }
 };
