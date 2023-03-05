@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
 import useStateContext from '../../state/context/state/use-state-context';
+import { InputFriendlyNumber } from '../../types';
 import { fetchRandomNumbers } from '../../utils/fetch-random-numbers/fetch-random-number';
 
 const useRandomNumbers = () => {
   const dispatch = useDispatchContext();
   const { isUsingRandomValues } = useStateContext();
 
-  const [numbers, setNumbers] = useState<(number | '')[]>([]);
+  const [numbers, setNumbers] = useState<InputFriendlyNumber[]>([]);
 
   useEffect(() => {
     if (!isUsingRandomValues) {

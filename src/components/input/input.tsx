@@ -3,12 +3,13 @@ import { ChangeEvent, useCallback } from 'react';
 import { MAX_NUMBER, MIN_NUMBER } from '../../constants';
 import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
 import useStateContext from '../../state/context/state/use-state-context';
+import { InputFriendlyNumber } from '../../types';
 import { StyledInput } from './input.styles';
 
 type Props = {
   disabled?: boolean;
   index: number;
-  value: number | '';
+  value: InputFriendlyNumber;
 };
 
 const Input = ({ disabled = false, index, value }: Props) => {

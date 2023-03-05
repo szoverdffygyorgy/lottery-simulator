@@ -6,13 +6,14 @@ import {
 } from '../../constants';
 import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
 import useStateContext from '../../state/context/state/use-state-context';
+import { InputFriendlyNumber } from '../../types';
 import randomInt from '../../utils/random/random-int';
 
 const useLotteryNumbers = () => {
   const dispatch = useDispatchContext();
   const { drawSpeed, isDrawing, numbersInPlay } = useStateContext();
 
-  const [numbers, setNumbers] = useState<(number | '')[]>(
+  const [numbers, setNumbers] = useState<InputFriendlyNumber[]>(
     Array.from({ length: NUMBER_OF_NUMBERS_TO_DRAW }, () => '')
   );
   const interval = useRef<number>();
