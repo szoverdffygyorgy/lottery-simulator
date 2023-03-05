@@ -18,6 +18,10 @@ export type Colors = {
 
 export type Theme = {
   background: Color;
+  checkbox: {
+    border: Color;
+    color: Color;
+  };
   input: {
     active: Color;
     border: Color;

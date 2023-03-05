@@ -7,6 +7,7 @@ export const INITIAL_STATE: State = {
   attempts: 4213,
   drawnNumbers: [23, 1, 58, 38, 78],
   drawSpeed: DRAW_SPEED,
+  isUsingRandomValues: false,
   numbersInPlay: Array.from({ length: NUMBER_OF_NUMBERS_TO_DRAW }, () => ''),
   results: {
     two: 213214,

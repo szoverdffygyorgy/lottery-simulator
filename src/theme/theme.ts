@@ -8,6 +8,10 @@ import { Theme } from './types';
 
 const theme: Theme = {
   background: colors.grey1,
+  checkbox: {
+    border: colors.blue1,
+    color: colors.blue1,
+  },
   input: {
     active: colors.green1,
     border: colors.green1,
