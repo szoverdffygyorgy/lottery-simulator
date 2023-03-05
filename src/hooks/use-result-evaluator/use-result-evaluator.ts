@@ -35,6 +35,10 @@ const useResultEvaluator = () => {
         [key]: results[key as keyof Results] + 1,
       },
     });
+
+    if (result === 5) {
+      dispatch({ command: 'STOP_DRAW' });
+    }
   }, [drawnNumbers]);
 };
 

@@ -11,12 +11,15 @@ export type Action =
   | { command: 'TOGGLE_RANDOM_VALUES'; isUsingRandomValues: boolean }
   | { command: 'SET_NEW_LOTTERY_NUMBERS'; drawnNumbers: (number | '')[] }
   | { command: 'UPDATE_RESULTS'; results: Partial<Results> }
-  | { command: 'INCREMENT_ATTEMPTS' };
+  | { command: 'INCREMENT_ATTEMPTS' }
+  | { command: 'STOP_DRAW' }
+  | { command: 'RESET' };
 
 export type State = {
   attempts: number;
   drawnNumbers: (number | '')[];
   drawSpeed: number;
+  isDrawing: boolean;
   isUsingRandomValues: boolean;
   numbersInPlay: (number | '')[];
   results: Results;

@@ -1,4 +1,5 @@
 import { INITIAL_DRAW_SPEED, NUMBER_OF_NUMBERS_TO_DRAW } from '../../constants';
+import { DEFAULT_STATE, INITIAL_STATE } from '../constants';
 import { Action, State } from '../types';
 
 const reducer = (state: State, action: Action) => {
@@ -46,6 +47,16 @@ const reducer = (state: State, action: Action) => {
 
     case 'INCREMENT_ATTEMPTS': {
       state = { ...state, attempts: state.attempts + 1 };
+      break;
+    }
+
+    case 'STOP_DRAW': {
+      state = { ...state, isDrawing: false };
+      break;
+    }
+
+    case 'RESET': {
+      state = { ...DEFAULT_STATE };
       break;
     }
 

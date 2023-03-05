@@ -10,14 +10,14 @@ import randomInt from '../../utils/random/random-int';
 
 const useLotteryNumbers = () => {
   const dispatch = useDispatchContext();
-  const { drawSpeed, numbersInPlay } = useStateContext();
+  const { drawSpeed, isDrawing, numbersInPlay } = useStateContext();
 
   const [numbers, setNumbers] = useState<(number | '')[]>(
     Array.from({ length: NUMBER_OF_NUMBERS_TO_DRAW }, () => '')
   );
   const interval = useRef<number>();
 
-  const getLotteryNumbers = useCallback(async () => {
+  const getLotteryNumbers = useCallback(() => {
     setNumbers(
       Array.from({ length: NUMBER_OF_NUMBERS_TO_DRAW }, () =>
         randomInt(MIN_NUMBER, MAX_NUMBER)
@@ -38,8 +38,12 @@ const useLotteryNumbers = () => {
       window.clearInterval(interval.current);
     }
 
+    if (!isDrawing) {
+      return;
+    }
+
     interval.current = window.setInterval(getLotteryNumbers, drawSpeed);
-  }, [drawSpeed]);
+  }, [drawSpeed, isDrawing]);
 };
 
 export default useLotteryNumbers;

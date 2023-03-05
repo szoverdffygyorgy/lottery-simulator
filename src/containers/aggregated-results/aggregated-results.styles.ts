@@ -1,4 +1,5 @@
-import { styled } from '../../theme/theme';
+import { css, styled } from '../../theme/theme';
+import { TextProps } from './types';
 
 export const Container = styled.div`
   display: flex;
@@ -10,10 +11,24 @@ export const Container = styled.div`
   border-radius: 10px;
 `;
 
-export const Text = styled.label`
+export const Text = styled.label<TextProps>`
   font-size: 14px;
   font-weight: 700;
   color: ${({ theme }) => theme.secondaryText};
+
+  ${({ isHighlighted = false, theme }) =>
+    isHighlighted
+      ? css`
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: ${theme.primaryText};
+          font-size: 222px;
+          transition: all 1s;
+          z-index: 1;
+        `
+      : null};
 `;
 
 export const BoldText = styled.label`

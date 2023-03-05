@@ -1,11 +1,12 @@
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 792px;
   height: 642px;
-  margin: 40px auto auto auto;
+  margin: 40px auto 32px auto;
   padding: 48px 78px;
   border-radius: 24px;
   background-color: ${({ theme }) => theme.mainContainerBackground};
