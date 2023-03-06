@@ -4,7 +4,7 @@ import { styled } from '../../theme/theme';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   margin-bottom: 24px;
 
   @media ${breakpoints.mobile} {
