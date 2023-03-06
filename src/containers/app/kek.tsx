@@ -3,9 +3,9 @@ import useSaveProgress from '../../hooks/use-save-progress/use-save-progress';
 import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
 import MainContainer from '../main-container/main-container';
 import Title from '../title/title';
-import { ResetButton, Container } from './app.styles';
+import { ResetButton, Container } from './kek.styles';
 
-function App() {
+const App = () => {
   const dispatch = useDispatchContext();
 
   useSaveProgress();
@@ -19,6 +19,6 @@ function App() {
       <ResetButton onClick={onResetClick}>Reset progress</ResetButton>
     </Container>
   );
-}
+};
 
 export default App;
