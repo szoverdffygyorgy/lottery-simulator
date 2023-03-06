@@ -62,18 +62,10 @@ export const CellTitle = styled.label`
   margin-bottom: 9px;
   font-size: 12px;
   font-weight: 700;
-
-  @media ${breakpoints.tablet} {
-    font-size: 6px;
-  }
 `;
 
 export const CellValue = styled.label`
   font-size: 16px;
   font-weight: 700;
   text-align: center;
-
-  ${breakpoints.tablet} {
-    font-size: 8px;
-  }
 `;
