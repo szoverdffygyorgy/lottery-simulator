@@ -23,7 +23,7 @@ export const StyledCheckbox = styled.input`
     display: block;
     width: 100%;
     height: 100%;
-    background: url('/check.svg') center center no-repeat;
+    background: url('./check.svg') center center no-repeat;
   }
 
   @media ${breakpoints.mobile} {
