@@ -248,7 +248,7 @@ Error generating stack: `+s.message+`
     display: block;
     width: 100%;
     height: 100%;
-    background: url('/check.svg') center center no-repeat;
+    background: url('./check.svg') center center no-repeat;
   }
 
   @media ${on.mobile} {
@@ -431,7 +431,7 @@ function print() { __p += __j.call(arguments, '') }
 `,MT=Te.img`
   width: 28px;
   height: 28px;
-`,DT=()=>oe(zT,{children:oe(MT,{src:"/mito.svg",alt:"Mito"})}),FT=Te.div`
+`,DT=()=>oe(zT,{children:oe(MT,{src:"./mito.svg",alt:"Mito"})}),FT=Te.div`
   display: flex;
   align-items: center;
   max-width: 100%;
