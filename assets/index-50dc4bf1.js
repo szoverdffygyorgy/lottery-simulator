@@ -371,7 +371,7 @@ function print() { __p += __j.call(arguments, '') }
 `,TT=()=>{const{isUsingRandomValues:e,numbersInPlay:n}=Ut();return Kt(CT,{children:[oe(kT,{children:"Your numbers:"}),oe(AT,{children:n.map((r,u)=>oe(Rv,{disabled:e,index:u,value:r},u))})]})},RT=Te.div`
   display: flex;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   margin-bottom: 24px;
 
   @media ${tn.mobile} {
