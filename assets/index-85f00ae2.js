@@ -169,13 +169,14 @@ Error generating stack: `+s.message+`
 `,fT=()=>Kt(sT,{children:[oe(aT,{children:"Speed"}),oe(oT,{})]}),cT=["two","three","four","five"],dT=Te.div`
   display: flex;
   flex-wrap: wrap;
-  max-width: 510px;
+  width: 510px;
   margin-bottom: 32px;
   border: 1px solid ${({theme:e})=>e.secondary};
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
-  @media ${tn.mobile} {
+  @media ${tn.tablet} {
+    width: 288px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1px;
     margin-bottom: 22px;
@@ -193,7 +194,7 @@ Error generating stack: `+s.message+`
     border-right: 1px solid ${({theme:e})=>e.secondary};
   }
 
-  @media ${tn.mobile} {
+  @media ${tn.tablet} {
     width: 142px;
     padding: 12px 43px;
     background-color: ${({theme:e})=>e.mainContainerBackground};
