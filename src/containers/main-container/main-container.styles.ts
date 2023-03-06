@@ -16,7 +16,7 @@ export const Container = styled.div`
   @media ${breakpoints.mobile} {
     max-width: 320px;
     max-height: 572px;
-    padding: 16px;
+    padding: 16px 16px 32px 16px;
     border-radius: 0;
   }
 `;
