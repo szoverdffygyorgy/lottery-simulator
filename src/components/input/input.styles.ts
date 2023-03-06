@@ -32,7 +32,7 @@ export const StyledInput = styled.input`
     width: 22px;
     height: 25px;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 8px;
 
     &:not(:last-of-type) {
       margin-right: 12px;
