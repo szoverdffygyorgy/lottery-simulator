@@ -1,3 +1,4 @@
+import breakpoints from '../../theme/breakpoints';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
@@ -5,6 +6,10 @@ export const Container = styled.div`
   align-items: center;
   height: 100%;
   padding: 0 32px 0 20px;
+
+  @media ${breakpoints.mobile} {
+    padding: 0 16px 0 20px;
+  }
 `;
 
 export const Image = styled.img`

@@ -1,5 +1,11 @@
 import useStateContext from '../../state/context/state/use-state-context';
-import { BoldText, Container, Grid, Text } from './aggregated-results.styles';
+import {
+  Attempts,
+  Container,
+  Grid,
+  LargeText,
+  Text,
+} from './aggregated-results.styles';
 import { PLAY_COST, WEEKS_IN_A_YEAR } from './constants';
 
 const AggregatedResults = () => {
@@ -8,8 +14,8 @@ const AggregatedResults = () => {
   return (
     <Container>
       <Grid>
-        <BoldText>Number of tickets: </BoldText>
-        <BoldText>{attempts}</BoldText>
+        <LargeText>Number of tickets: </LargeText>
+        <Attempts>{attempts}</Attempts>
         <Text>Years spent:</Text>
         <Text isHighlighted={!isDrawing}>
           {Math.floor(attempts / WEEKS_IN_A_YEAR)}

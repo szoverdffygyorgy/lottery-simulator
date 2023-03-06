@@ -1,3 +1,4 @@
+import breakpoints from '../../theme/breakpoints';
 import { styled } from '../../theme/theme';
 
 export const StyledCheckbox = styled.input`
@@ -16,8 +17,19 @@ export const StyledCheckbox = styled.input`
   &:checked::before {
     content: '';
     display: block;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background: url('/check.svg') center center no-repeat;
   }
-  `;
+
+  @media ${breakpoints.mobile} {
+    width: 20px;
+    height: 20px;
+
+    &:checked::before {
+      width: 100%;
+      height: 100%;
+      transform: scale(60%);
+    }
+  }
+`;

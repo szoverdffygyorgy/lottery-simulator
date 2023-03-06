@@ -1,13 +1,23 @@
+import breakpoints from '../../theme/breakpoints';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: fit-content;
+  max-width: 510px;
   margin-bottom: 32px;
   border: 1px solid ${({ theme }) => theme.secondary};
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+  @media ${breakpoints.mobile} {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1px;
+    flex-wrap: none;
+    margin-bottom: 22px;
+    background-color: ${({ theme }) => theme.secondary};
+  }
 `;
 
 export const Cell = styled.div`
@@ -20,6 +30,16 @@ export const Cell = styled.div`
 
   &:not(:last-of-type) {
     border-right: 1px solid ${({ theme }) => theme.secondary};
+  }
+
+  @media ${breakpoints.mobile} {
+    width: 142px;
+    padding: 12px 43px;
+    background-color: ${({ theme }) => theme.mainContainerBackground};
+
+    &:not(:last-of-type) {
+      border-right: none;
+    }
   }
 `;
 

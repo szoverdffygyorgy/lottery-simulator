@@ -37,3 +37,9 @@ export type Theme = {
     track: Color;
   };
 };
+
+type Breakpoint = `(max-width: ${number}px)`;
+
+type Device = 'mobile';
+
+export type Breakpoints = Record<Device, Breakpoint>;

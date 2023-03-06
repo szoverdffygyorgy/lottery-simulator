@@ -1,26 +1,27 @@
+import breakpoints from '../../theme/breakpoints';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
-  width: 100%;
-  height: 50px;
+  max-width: 100%;
 `;
 
 export const SliderInput = styled.input`
   -webkit-appearance: none;
   appearance: none;
   background: transparent;
-  cursor: pointer;
   width: 100%;
-  height: 16px;
+  height: 8px;
+  margin: 0;
+  cursor: pointer;
 
   &::-webkit-slider-runnable-track {
-    height: 5px;
+    height: 4px;
     background: ${({ theme }) => theme.slider.track};
     border-radius: 3px;
   }
 
   &::-moz-range-track {
-    height: 5px;
+    height: 4px;
     background: ${({ theme }) => theme.slider.track};
     border-radius: 3px;
   }
@@ -28,19 +29,22 @@ export const SliderInput = styled.input`
   &::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
-    height: 16px;
-    width: 16px;
-    margin-top: -6px; /* Centers thumb on the track */
+    height: 8px;
+    width: 8px;
+    margin-top: -2px; /* Centers thumb on the track */
     border: 1px solid ${({ theme }) => theme.slider.thumbBorder};
     border-radius: 50%;
     background: ${({ theme }) => theme.slider.thumb};
   }
 
   &::-moz-range-thumb {
-    height: 16px;
-    width: 16px;
+    height: 8px;
+    width: 8px;
     border: 1px solid ${({ theme }) => theme.slider.thumbBorder};
     border-radius: 50%;
     background: ${({ theme }) => theme.slider.thumb};
+  }
+
+  @media ${breakpoints.mobile} {
   }
 `;

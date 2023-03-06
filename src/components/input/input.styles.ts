@@ -1,3 +1,4 @@
+import breakpoints from '../../theme/breakpoints';
 import { styled } from '../../theme/theme';
 
 export const StyledInput = styled.input`
@@ -25,5 +26,16 @@ export const StyledInput = styled.input`
 
   input[type='number'] {
     -moz-appearance: textfield;
+  }
+
+  @media ${breakpoints.mobile} {
+    width: 22px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 12px;
+
+    &:not(:last-of-type) {
+      margin-right: 12px;
+    }
   }
 `;
