@@ -237,7 +237,11 @@ Error generating stack: `+s.message+`
   height: 32px;
   border: 1px solid ${({theme:e})=>e.checkbox.border};
   border-radius: 5px;
-  drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.15));
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &:checked::before {
     content: '';
