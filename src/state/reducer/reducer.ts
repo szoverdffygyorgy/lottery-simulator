@@ -1,12 +1,11 @@
-import { INITIAL_DRAW_SPEED, NUMBER_OF_NUMBERS_TO_DRAW } from '../../constants';
-import { DEFAULT_STATE, INITIAL_STATE } from '../constants';
+import { NUMBER_OF_NUMBERS_TO_DRAW } from '../../constants';
+import { DEFAULT_STATE } from '../constants';
 import { Action, State } from '../types';
 
 const reducer = (state: State, action: Action) => {
   switch (action.command) {
     case 'SET_DRAW_SPEED': {
-      console.log({ state: state.drawSpeed, action: action.drawSpeed });
-      state = { ...state, drawSpeed: action.drawSpeed || INITIAL_DRAW_SPEED };
+      state = { ...state, drawSpeed: action.drawSpeed };
 
       break;
     }
