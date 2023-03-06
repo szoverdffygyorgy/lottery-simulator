@@ -2,7 +2,7 @@ import { ChangeEvent, useCallback } from 'react';
 import { MAX_DRAW_SPEED, MIN_DRAW_SPEED } from '../../constants';
 import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
 import useStateContext from '../../state/context/state/use-state-context';
-import { Container, SliderInput } from './bruh.styles';
+import { Container, SliderInput } from './slider.styles';
 
 const Slider = () => {
   const dispatch = useDispatchContext();

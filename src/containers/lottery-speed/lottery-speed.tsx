@@ -1,4 +1,4 @@
-import Slider from '../../components/slider/bruh';
+import Slider from '../../components/slider/slider';
 import { Container, Title } from './lottery-speed.styles';
 
 const LotterySpeed = () => {

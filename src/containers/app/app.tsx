@@ -3,7 +3,7 @@ import useSaveProgress from '../../hooks/use-save-progress/use-save-progress';
 import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
 import MainContainer from '../main-container/main-container';
 import Title from '../title/title';
-import { ResetButton, Container } from './kek.styles';
+import { ResetButton, Container } from './app.styles';
 
 const App = () => {
   const dispatch = useDispatchContext();
