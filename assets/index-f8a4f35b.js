@@ -406,7 +406,7 @@ function print() { __p += __j.call(arguments, '') }
   @media ${tn.mobile} {
     max-width: 320px;
     max-height: 572px;
-    padding: 16px;
+    padding: 16px 16px 32px 16px;
     border-radius: 0;
   }
 `,OT=Te.h2`
