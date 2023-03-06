@@ -4,13 +4,14 @@ import { styled } from '../../theme/theme';
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  max-width: 510px;
+  width: 510px;
   margin-bottom: 32px;
   border: 1px solid ${({ theme }) => theme.secondary};
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
-  @media ${breakpoints.mobile} {
+  @media ${breakpoints.tablet} {
+    width: 288px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1px;
     margin-bottom: 22px;
@@ -30,7 +31,7 @@ export const Cell = styled.div`
     border-right: 1px solid ${({ theme }) => theme.secondary};
   }
 
-  @media ${breakpoints.mobile} {
+  @media ${breakpoints.tablet} {
     width: 142px;
     padding: 12px 43px;
     background-color: ${({ theme }) => theme.mainContainerBackground};
