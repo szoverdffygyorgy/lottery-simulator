@@ -11,10 +11,8 @@ export const Container = styled.div`
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
   @media ${breakpoints.mobile} {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1px;
-    flex-wrap: none;
     margin-bottom: 22px;
     background-color: ${({ theme }) => theme.secondary};
   }
@@ -25,7 +23,7 @@ export const Cell = styled.div`
   flex-direction: column;
   width: 127px;
   height: 72px;
-  padding: 12px 34px 34px;
+  padding: 12px 34px;
   color: ${({ theme }) => theme.primaryText};
 
   &:not(:last-of-type) {
@@ -39,6 +37,22 @@ export const Cell = styled.div`
 
     &:not(:last-of-type) {
       border-right: none;
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 10px;
+    }
+
+    &:nth-of-type(2) {
+      border-top-right-radius: 10px;
+    }
+
+    &:nth-of-type(3) {
+      border-bottom-left-radius: 10px;
+    }
+
+    &:last-of-type {
+      border-bottom-right-radius: 10px;
     }
   }
 `;

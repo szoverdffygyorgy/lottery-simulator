@@ -40,6 +40,6 @@ export type Theme = {
 
 type Breakpoint = `(max-width: ${number}px)`;
 
-type Device = 'mobile';
+type Device = 'mobile' | 'tablet';
 
 export type Breakpoints = Record<Device, Breakpoint>;
