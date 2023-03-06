@@ -34,6 +34,10 @@ export const Text = styled.label<TextProps>`
           z-index: 1;
         `
       : null};
+
+  @media ${breakpoints.mobile} {
+    font-size: 6px;
+  }
 `;
 
 export const LargeText = styled.label`
@@ -42,7 +46,7 @@ export const LargeText = styled.label`
   color: ${({ theme }) => theme.secondaryText};
 
   @media ${breakpoints.mobile} {
-    font-size: 14px;
+    font-size: 8px;
   }
 `;
 
@@ -52,7 +56,7 @@ export const Attempts = styled.label`
   color: ${({ theme }) => theme.secondaryText};
 
   @media ${breakpoints.mobile} {
-    font-size: 14px;
+    font-size: 8px;
   }
 `;
 

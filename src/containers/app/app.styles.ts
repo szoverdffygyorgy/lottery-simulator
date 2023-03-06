@@ -15,8 +15,8 @@ export const ResetButton = styled.button`
   outline: none;
   border: none;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.mainContainerBackground};
-  color: ${({ theme }) => theme.primaryText};
+  background-color: ${({ theme }) => theme.button.background};
+  color: ${({ theme }) => theme.button.text};
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
   &:hover {

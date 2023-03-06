@@ -13,7 +13,7 @@ export const Title = styled.h2`
 
   @media ${breakpoints.mobile} {
     margin: 0 0 10px 0;
-    font-size: 12px;
+    font-size: 8px;
     font-weight: 600;
   }
 `;

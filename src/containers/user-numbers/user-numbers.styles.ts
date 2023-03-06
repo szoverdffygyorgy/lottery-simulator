@@ -20,7 +20,7 @@ export const Title = styled.h3`
 
   @media ${breakpoints.mobile} {
     margin: 0 42px 0 0;
-    font-size: 12px;
+    font-size: 8px;
     font-weight: 600;
   }
 `;

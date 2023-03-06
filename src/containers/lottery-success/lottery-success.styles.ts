@@ -34,7 +34,7 @@ export const Cell = styled.div`
   @media ${breakpoints.tablet} {
     width: 142px;
     padding: 12px 43px;
-    background-color: ${({ theme }) => theme.mainContainerBackground};
+    background-color: ${({ theme }) => theme.mainContainer.background};
 
     &:not(:last-of-type) {
       border-right: none;
@@ -62,10 +62,18 @@ export const CellTitle = styled.label`
   margin-bottom: 9px;
   font-size: 12px;
   font-weight: 700;
+
+  @media ${breakpoints.tablet} {
+    font-size: 6px;
+  }
 `;
 
 export const CellValue = styled.label`
   font-size: 16px;
   font-weight: 700;
   text-align: center;
+
+  ${breakpoints.tablet} {
+    font-size: 8px;
+  }
 `;

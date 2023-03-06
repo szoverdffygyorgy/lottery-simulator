@@ -17,7 +17,12 @@ export type Colors = {
 
 export type Theme = {
   background: Color;
+  button: {
+    background: Color;
+    text: Color;
+  };
   checkbox: {
+    background: Color;
     border: Color;
     color: Color;
   };
@@ -26,7 +31,9 @@ export type Theme = {
     disabledBackground: Color;
     text: Color;
   };
-  mainContainerBackground: Color;
+  mainContainer: {
+    background: Color;
+  };
   primary: Color;
   primaryText: Color;
   secondary: Color;

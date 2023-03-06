@@ -8,7 +8,12 @@ import { Theme } from './types';
 
 const theme: Theme = {
   background: colors.grey1,
+  button: {
+    background: colors.white,
+    text: colors.blue1,
+  },
   checkbox: {
+    background: colors.white,
     border: colors.blue1,
     color: colors.blue1,
   },
@@ -17,7 +22,9 @@ const theme: Theme = {
     disabledBackground: colors.white,
     text: colors.blue1,
   },
-  mainContainerBackground: colors.white,
+  mainContainer: {
+    background: colors.white,
+  },
   primary: colors.green1,
   primaryText: colors.blue1,
   secondary: colors.yellow1,

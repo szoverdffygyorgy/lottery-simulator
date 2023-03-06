@@ -4,7 +4,7 @@ import { styled } from '../../theme/theme';
 export const StyledCheckbox = styled.input`
   -webkit-appearance: none;
   appearance: none;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.checkbox.background};
   margin: 0;
 
   color: ${({ theme }) => theme.checkbox.color};

@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin: 40px auto 32px auto;
   padding: 48px 78px;
   border-radius: 24px;
-  background-color: ${({ theme }) => theme.mainContainerBackground};
+  background-color: ${({ theme }) => theme.mainContainer.background};
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
   @media ${breakpoints.mobile} {
