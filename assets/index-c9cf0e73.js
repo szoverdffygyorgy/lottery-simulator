@@ -109,7 +109,7 @@ Error generating stack: `+s.message+`
     row-gap: 8px;
     grid-template-columns: 52.43% 47.57%;
   }
-`,tT=300,rT=52,iT=()=>{const{attempts:e,isDrawing:n}=Ut();return oe(qA,{children:Kt(nT,{children:[oe(bA,{children:"Number of tickets: "}),oe(eT,{children:e}),oe(Fu,{children:"Years spent:"}),oe(Fu,{isHighlighted:!n,children:Math.floor(e/rT)}),!n&&oe(Fu,{}),oe(Fu,{children:"Cost of tickets: "}),oe(Fu,{children:new Intl.NumberFormat("hu-HU",{style:"currency",currency:"HUF"}).format(e*tT)})]})})},uT=Te.div`
+`,tT=300,rT=52,iT=()=>{const{attempts:e,isDrawing:n}=Ut();return oe(qA,{children:Kt(nT,{children:[oe(bA,{children:"Number of tickets:"}),oe(eT,{children:e}),oe(Fu,{children:"Years spent:"}),oe(Fu,{isHighlighted:!n,children:Math.floor(e/rT)}),!n&&oe(Fu,{}),oe(Fu,{children:"Cost of tickets:"}),oe(Fu,{children:new Intl.NumberFormat("hu-HU",{style:"currency",currency:"HUF"}).format(e*tT)})]})})},uT=Te.div`
   max-width: 100%;
 `,lT=Te.input`
   -webkit-appearance: none;
