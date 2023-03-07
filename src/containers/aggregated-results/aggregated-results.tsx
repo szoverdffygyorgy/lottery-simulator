@@ -14,14 +14,14 @@ const AggregatedResults = () => {
   return (
     <Container>
       <Grid>
-        <LargeText>Number of tickets: </LargeText>
+        <LargeText>Number of tickets:</LargeText>
         <Attempts>{attempts}</Attempts>
         <Text>Years spent:</Text>
         <Text isHighlighted={!isDrawing}>
           {Math.floor(attempts / WEEKS_IN_A_YEAR)}
         </Text>
         {/* Placeholder in case of a jackpot */ !isDrawing && <Text />}
-        <Text>Cost of tickets: </Text>
+        <Text>Cost of tickets:</Text>
         <Text>
           {new Intl.NumberFormat('hu-HU', {
             style: 'currency',
