@@ -13,6 +13,7 @@ export const Container = styled.div`
 
   @media ${breakpoints.mobile} {
     margin-bottom: 25px;
+    padding: 12px 16px 15px 12px;
   }
 `;
 
