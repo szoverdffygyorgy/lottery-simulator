@@ -66,6 +66,7 @@ Error generating stack: `+s.message+`
 
   @media ${tn.mobile} {
     margin-bottom: 25px;
+    padding: 12px 16px 15px 12px;
   }
 `,Fu=Te.label`
   font-size: 14px;
