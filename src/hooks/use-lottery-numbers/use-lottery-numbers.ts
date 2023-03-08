@@ -20,9 +20,9 @@ const useLotteryNumbers = () => {
 
   const getLotteryNumbers = useCallback(() => {
     setNumbers(
-      Array.from({ length: NUMBER_OF_NUMBERS_TO_DRAW }, () =>
-        randomInt(MIN_NUMBER, MAX_NUMBER)
-      )
+      Array.from<InputFriendlyNumber>({
+        length: NUMBER_OF_NUMBERS_TO_DRAW,
+      }).map((v, i, arr) => randomInt(MIN_NUMBER, MAX_NUMBER, arr))
     );
   }, []);
 
