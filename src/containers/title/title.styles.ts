@@ -1,4 +1,4 @@
-import breakpoints from '../../theme/breakpoints';
+import widthBreakpoints from '../../theme/breakpoints/width';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
@@ -8,7 +8,7 @@ export const Container = styled.div`
   height: 60px;
   background: linear-gradient(to right, #a5d9c8, 80.73%, #f6f0c6);
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     background: linear-gradient(to right, #a5d9c8, 76.56%, #f6f0c6);
   }
 `;
@@ -18,7 +18,7 @@ export const TitleText = styled.div`
   font-weight: 700;
   color: ${({ theme }) => theme.secondaryText};
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     font-size: 20px;
   }
 `;

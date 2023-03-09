@@ -1,4 +1,4 @@
-import breakpoints from '../../theme/breakpoints';
+import widthBreakpoints from '../../theme/breakpoints/width';
 import { css, styled } from '../../theme/theme';
 import { TextProps } from './types';
 
@@ -11,7 +11,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.primary};
   border-radius: 10px;
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     margin-bottom: 25px;
     padding: 12px 16px 15px 12px;
   }
@@ -34,7 +34,7 @@ export const Text = styled.label<TextProps>`
           transition: all 1s;
           z-index: 1;
 
-          @media ${breakpoints.mobile} {
+          @media ${widthBreakpoints.mobile} {
             font-size: 184px;
           }
         `
@@ -46,7 +46,7 @@ export const LargeText = styled.label`
   font-weight: 700;
   color: ${({ theme }) => theme.secondaryText};
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     font-size: 14px;
   }
 `;
@@ -56,7 +56,7 @@ export const Attempts = styled.label`
   font-weight: 800;
   color: ${({ theme }) => theme.secondaryText};
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     font-size: 14px;
   }
 `;
@@ -68,7 +68,7 @@ export const Grid = styled.div`
   width: 100%;
   height: 100%;
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     row-gap: 8px;
     grid-template-columns: 52.43% 47.57%;
   }

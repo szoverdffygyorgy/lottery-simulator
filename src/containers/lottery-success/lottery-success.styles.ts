@@ -1,4 +1,4 @@
-import breakpoints from '../../theme/breakpoints';
+import widthBreakpoints from '../../theme/breakpoints/width';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
@@ -10,7 +10,7 @@ export const Container = styled.div`
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
-  @media ${breakpoints.tablet} {
+  @media ${widthBreakpoints.tablet} {
     width: 288px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1px;
@@ -31,7 +31,7 @@ export const Cell = styled.div`
     border-right: 1px solid ${({ theme }) => theme.secondary};
   }
 
-  @media ${breakpoints.tablet} {
+  @media ${widthBreakpoints.tablet} {
     width: 142px;
     padding: 12px 43px;
     background-color: ${({ theme }) => theme.mainContainer.background};

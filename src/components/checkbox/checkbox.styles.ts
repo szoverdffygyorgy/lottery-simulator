@@ -1,4 +1,4 @@
-import breakpoints from '../../theme/breakpoints';
+import widthBreakpoints from '../../theme/breakpoints/width';
 import { styled } from '../../theme/theme';
 
 export const StyledCheckbox = styled.input`
@@ -26,7 +26,7 @@ export const StyledCheckbox = styled.input`
     background: url('./check.svg') center center no-repeat;
   }
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     width: 20px;
     height: 20px;
 

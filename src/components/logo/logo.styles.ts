@@ -1,4 +1,4 @@
-import breakpoints from '../../theme/breakpoints';
+import widthBreakpoints from '../../theme/breakpoints/width';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
@@ -7,7 +7,7 @@ export const Container = styled.div`
   height: 100%;
   padding: 0 32px 0 20px;
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     padding: 0 16px 0 20px;
   }
 `;

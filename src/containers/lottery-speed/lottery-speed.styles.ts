@@ -1,4 +1,4 @@
-import breakpoints from '../../theme/breakpoints';
+import widthBreakpoints from '../../theme/breakpoints/width';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
@@ -11,7 +11,7 @@ export const Title = styled.h2`
   font-weight: 400;
   color: ${({ theme }) => theme.primaryText};
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     margin: 0 0 10px 0;
     font-size: 12px;
     font-weight: 600;

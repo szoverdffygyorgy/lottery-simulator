@@ -1,4 +1,4 @@
-import breakpoints from '../../theme/breakpoints';
+import widthBreakpoints from '../../theme/breakpoints/width';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
@@ -13,11 +13,11 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.mainContainer.background};
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     max-width: 320px;
     max-height: 572px;
     padding: 16px 16px 32px 16px;
-    border-radius: 0;
+    border-radius: 2px;
   }
 `;
 
@@ -28,7 +28,7 @@ export const Title = styled.h2`
   font-weight: 700;
   color: ${({ theme }) => theme.primaryText};
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     margin-bottom: 24px;
     font-size: 32px;
   }

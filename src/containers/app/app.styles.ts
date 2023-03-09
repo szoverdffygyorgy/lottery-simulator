@@ -1,11 +1,16 @@
+import heightBreakpoints from '../../theme/breakpoints/height';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 100%;
-  padding-bottom: 32px;
+  width: 100%;
+  height: 100vh;
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.primaryText};
+
+  @media ${heightBreakpoints.tablet} {
+    height: 100%;
+    padding-bottom: 32px;
+  }
 `;
 
 export const ResetButton = styled.button`

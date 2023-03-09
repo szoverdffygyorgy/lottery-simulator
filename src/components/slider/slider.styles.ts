@@ -1,4 +1,4 @@
-import breakpoints from '../../theme/breakpoints';
+import widthBreakpoints from '../../theme/breakpoints/width';
 import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
@@ -45,6 +45,6 @@ export const SliderInput = styled.input`
     background: ${({ theme }) => theme.slider.thumb};
   }
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
   }
 `;

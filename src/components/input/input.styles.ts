@@ -1,4 +1,4 @@
-import breakpoints from '../../theme/breakpoints';
+import widthBreakpoints from '../../theme/breakpoints/width';
 import { styled } from '../../theme/theme';
 
 export const StyledInput = styled.input`
@@ -28,7 +28,7 @@ export const StyledInput = styled.input`
     -moz-appearance: textfield;
   }
 
-  @media ${breakpoints.mobile} {
+  @media ${widthBreakpoints.mobile} {
     width: 22px;
     height: 25px;
     border-radius: 5px;

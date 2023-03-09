@@ -47,8 +47,14 @@ export type Theme = {
   };
 };
 
-type Breakpoint = `(max-width: ${number}px)`;
+type MinMax = 'min' | 'max';
+
+type Metric = 'width' | 'height';
+
+type Breakpoint = `(${MinMax}-${Metric}: ${number}px)`;
 
 type Device = 'mobile' | 'tablet';
 
-export type Breakpoints = Record<Device, Breakpoint>;
+export type WidthBreakpoints = Record<Device, Breakpoint>;
+
+export type HeightBreakpoints = Partial<Record<Device, Breakpoint>>;
