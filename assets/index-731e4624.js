@@ -412,7 +412,7 @@ function print() { __p += __j.call(arguments, '') }
     max-width: 320px;
     max-height: 572px;
     padding: 16px 16px 32px 16px;
-    border-radius: 0;
+    border-radius: 2px;
   }
 `,NT=Te.h2`
   margin-top: 0;
@@ -455,13 +455,17 @@ function print() { __p += __j.call(arguments, '') }
   @media ${qe.mobile} {
     font-size: 20px;
   }
-`,UT=()=>Kt(DT,{children:[oe(MT,{}),oe(FT,{children:"Lottery Simulator"})]}),BT=Te.div`
-  width: 100vw;
-  height: 100%;
-  padding-bottom: 32px;
+`,UT=()=>Kt(DT,{children:[oe(MT,{}),oe(FT,{children:"Lottery Simulator"})]}),BT={tablet:"(max-height: 823px)"},WT=Te.div`
+  width: 100%;
+  height: 100vh;
   background-color: ${({theme:e})=>e.background};
   color: ${({theme:e})=>e.primaryText};
-`,WT=Te.button`
+
+  @media ${BT.tablet} {
+    height: 100%;
+    padding-bottom: 32px;
+  }
+`,HT=Te.button`
   display: block;
   width: 160px;
   height: 50px;
@@ -477,7 +481,7 @@ function print() { __p += __j.call(arguments, '') }
     cursor: pointer;
     background-color: ${({theme:e})=>e.button.hover};
   }
-`,HT=()=>{const e=yi();GA();const n=_e.useCallback(()=>e({command:"RESET"}),[]);return Kt(BT,{children:[oe(UT,{}),oe(OT,{}),oe(WT,{onClick:n,children:"Reset progress"})]})},VT=(e,n)=>{switch(n.command){case"SET_DRAW_SPEED":{e={...e,drawSpeed:n.drawSpeed};break}case"SET_USER_NUMBERS":{e={...e,numbersInPlay:n.numbersInPlay};break}case"TOGGLE_RANDOM_VALUES":{e={...e,isUsingRandomValues:n.isUsingRandomValues,numbersInPlay:Array.from({length:Hr},()=>"")};break}case"SET_NEW_LOTTERY_NUMBERS":{e={...e,drawnNumbers:n.drawnNumbers};break}case"UPDATE_RESULTS":{e={...e,results:{...e.results,...n.results}};break}case"INCREMENT_ATTEMPTS":{e={...e,attempts:e.attempts+1};break}case"STOP_DRAW":{e={...e,isDrawing:!1};break}case"RESET":{e={...VA};break}}return e},GT=({children:e})=>{const[n,r]=_e.useReducer(VT,Cv);return oe(Av.Provider,{value:n,children:oe(Tv.Provider,{value:r,children:e})})},jT=DA`
+`,VT=()=>{const e=yi();GA();const n=_e.useCallback(()=>e({command:"RESET"}),[]);return Kt(WT,{children:[oe(UT,{}),oe(OT,{}),oe(HT,{onClick:n,children:"Reset progress"})]})},GT=(e,n)=>{switch(n.command){case"SET_DRAW_SPEED":{e={...e,drawSpeed:n.drawSpeed};break}case"SET_USER_NUMBERS":{e={...e,numbersInPlay:n.numbersInPlay};break}case"TOGGLE_RANDOM_VALUES":{e={...e,isUsingRandomValues:n.isUsingRandomValues,numbersInPlay:Array.from({length:Hr},()=>"")};break}case"SET_NEW_LOTTERY_NUMBERS":{e={...e,drawnNumbers:n.drawnNumbers};break}case"UPDATE_RESULTS":{e={...e,results:{...e.results,...n.results}};break}case"INCREMENT_ATTEMPTS":{e={...e,attempts:e.attempts+1};break}case"STOP_DRAW":{e={...e,isDrawing:!1};break}case"RESET":{e={...VA};break}}return e},jT=({children:e})=>{const[n,r]=_e.useReducer(GT,Cv);return oe(Av.Provider,{value:n,children:oe(Tv.Provider,{value:r,children:e})})},QT=DA`
   * {
     font-family: Nunito; 
     box-sizing: border-box;
@@ -486,4 +490,4 @@ function print() { __p += __j.call(arguments, '') }
   body {
     margin: auto;
   }
-`;Jf.createRoot(document.getElementById("root")).render(Kt(_e.StrictMode,{children:[oe(jT,{}),oe(zA,{theme:XA,children:oe(GT,{children:oe(HT,{})})})]}));
+`;Jf.createRoot(document.getElementById("root")).render(Kt(_e.StrictMode,{children:[oe(QT,{}),oe(zA,{theme:XA,children:oe(jT,{children:oe(VT,{})})})]}));
