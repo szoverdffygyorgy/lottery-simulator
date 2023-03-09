@@ -2,7 +2,8 @@ import { styled } from '../../theme/theme';
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 32px;
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.primaryText};
 `;
@@ -21,5 +22,6 @@ export const ResetButton = styled.button`
 
   &:hover {
     cursor: pointer;
+    background-color: ${({ theme }) => theme.button.hover};
   }
 `;

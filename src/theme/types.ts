@@ -11,6 +11,7 @@ export type Colors = {
   green1: Color;
   green2: Color;
   grey1: Color;
+  grey2: Color;
   yellow1: Color;
   white: Color;
 };
@@ -19,6 +20,7 @@ export type Theme = {
   background: Color;
   button: {
     background: Color;
+    hover: Color;
     text: Color;
   };
   checkbox: {

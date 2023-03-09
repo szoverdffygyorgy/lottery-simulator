@@ -33,6 +33,10 @@ export const Text = styled.label<TextProps>`
           font-size: 222px;
           transition: all 1s;
           z-index: 1;
+
+          @media ${breakpoints.mobile} {
+            font-size: 184px;
+          }
         `
       : null};
 `;

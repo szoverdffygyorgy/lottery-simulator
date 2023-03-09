@@ -21,7 +21,7 @@ const useResultEvaluator = () => {
       0
     );
 
-    const [key, _] =
+    const [key] =
       Object.entries(NUMBER_MAP).find(([_, number]) => number === result) ?? [];
 
     if (!key) {

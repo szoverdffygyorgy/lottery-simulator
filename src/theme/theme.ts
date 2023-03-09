@@ -10,6 +10,7 @@ const theme: Theme = {
   background: colors.grey1,
   button: {
     background: colors.white,
+    hover: colors.grey2,
     text: colors.blue1,
   },
   checkbox: {

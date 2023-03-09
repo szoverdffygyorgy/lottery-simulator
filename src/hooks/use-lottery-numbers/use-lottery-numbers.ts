@@ -7,6 +7,7 @@ import {
 import useDispatchContext from '../../state/context/dispatch/use-dispatch-context';
 import useStateContext from '../../state/context/state/use-state-context';
 import { InputFriendlyNumber } from '../../types';
+import drawNumbers from '../../utils/draw-numbers/draw-numbers';
 import randomInt from '../../utils/random/random-int';
 
 const useLotteryNumbers = () => {
@@ -19,11 +20,12 @@ const useLotteryNumbers = () => {
   const interval = useRef<number>();
 
   const getLotteryNumbers = useCallback(() => {
-    setNumbers(
-      Array.from<InputFriendlyNumber>({
-        length: NUMBER_OF_NUMBERS_TO_DRAW,
-      }).map((v, i, arr) => randomInt(MIN_NUMBER, MAX_NUMBER, arr))
+    const numbers: InputFriendlyNumber[] = Array.from(
+      { length: NUMBER_OF_NUMBERS_TO_DRAW },
+      () => ''
     );
+
+    setNumbers(drawNumbers(numbers));
   }, []);
 
   useEffect(() => {
