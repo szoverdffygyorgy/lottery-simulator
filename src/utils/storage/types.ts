@@ -1,1 +1,3 @@
-export type StorageKey = 'attempts' | 'draw-speed' | 'results';
+type StorageKeyName = 'attempts' | 'draw-speed' | 'results';
+
+export type StorageKey = `react-${StorageKeyName}`;

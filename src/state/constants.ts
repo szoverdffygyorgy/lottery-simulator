@@ -18,13 +18,13 @@ export const DEFAULT_STATE: State = {
 };
 
 export const INITIAL_STATE: State = {
-  attempts: storage.get<number>('attempts') ?? 0,
+  attempts: storage.get<number>('react-attempts') ?? 0,
   drawnNumbers: Array.from({ length: NUMBER_OF_NUMBERS_TO_DRAW }, () => ''),
-  drawSpeed: storage.get<number>('draw-speed') ?? INITIAL_DRAW_SPEED,
+  drawSpeed: storage.get<number>('react-draw-speed') ?? INITIAL_DRAW_SPEED,
   isDrawing: true,
   isUsingRandomValues: false,
   numbersInPlay: Array.from({ length: NUMBER_OF_NUMBERS_TO_DRAW }, () => ''),
-  results: storage.get<Results>('results') ?? {
+  results: storage.get<Results>('react-results') ?? {
     two: 0,
     three: 0,
     four: 0,
